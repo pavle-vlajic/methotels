@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { RoomFormComponent } from './components/room-form/room-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FilterPipe } from './helpers/filter.pipe';
+import { SearchRoomComponent } from './components/search-room/search-room.component';
+import { FiltersearchPipe } from './helpers/filtersearch.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomsComponent,
     RoomFormComponent,
-    FilterPipe
+    SearchRoomComponent,
+    FiltersearchPipe,
   ],
   imports: [
     BrowserModule,
