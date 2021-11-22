@@ -11,7 +11,7 @@ export class RoomsComponent implements OnInit {
 
   rooms: Room[];
 
-  @Input() title: string;
+  @Input() price: number;
 
   constructor(private roomService: RoomService) { }
 
@@ -27,7 +27,7 @@ export class RoomsComponent implements OnInit {
   }
 
   shuffleArray() {
-    let currentIndex = this.rooms.length,  randomIndex;
+    let currentIndex = this.rooms.length, randomIndex;
 
     // While there remain elements to shuffle...
     while (currentIndex != 0) {

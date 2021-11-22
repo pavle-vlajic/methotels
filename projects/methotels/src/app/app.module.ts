@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { RoomFormComponent } from './components/room-form/room-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SearchRoomComponent } from './components/search-room/search-room.component';
+import { FilterComponent } from './components/filter/filter.component';
 import { FiltersearchPipe } from './helpers/filtersearch.pipe';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { FiltersearchPipe } from './helpers/filtersearch.pipe';
     AppComponent,
     RoomsComponent,
     RoomFormComponent,
-    SearchRoomComponent,
+    FilterComponent,
     FiltersearchPipe,
   ],
   imports: [
