@@ -23,14 +23,20 @@ export class RoomFormComponent implements OnInit {
 
     this.myFormGroup = this.myFormBuilder.group({
 
-      id: [ '', [] ],
-      title: [ '', [] ],
-      imageUrl: [ '', [] ],
-      price: [ '', [] ]
+      id: ['', []],
+      title: ['', []],
+      imageUrl: ['', []],
+      price: ['', []]
     });
   }
 
-  onSubmit() {
+  onAdd(canAdd: boolean) {
+    if (canAdd) {
+      this.onSubmit();
+    }
+  }
+
+  private onSubmit() {
 
     // add room
 
