@@ -30,4 +30,32 @@ export class RoomService {
   addRoom(room: Room) {
     this.rooms.push(room);
   }
+
+  deleteRoom(room: Room) {
+    this.rooms.forEach((curr, i) => {
+      if (room.id === curr.id) {
+        this.rooms.splice(i, 1);
+      }
+    });
+  }
+
+  updateRoom(room: Room) {
+
+    this.rooms.forEach((curr, i) => {
+      if (room.id === curr.id) {
+        this.rooms.splice(i, 1);
+      }
+    });
+
+    room.title = 'Room ' + this.getRandomInt(10, 20);
+
+    room.price = this.getRandomInt(55, 95);
+
+    this.rooms.unshift(room);
+  }
+
+  // [10, 20)
+  getRandomInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
 }

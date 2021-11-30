@@ -26,6 +26,17 @@ export class RoomsComponent implements OnInit {
     });
   }
 
+  onDelete(room: Room) {
+
+    if (confirm('Da li zaista zelite da obrisete ovaj zapis?')) {
+      this.roomService.deleteRoom(room);
+    }
+  }
+
+  onUpdate(room: Room) {
+    this.roomService.updateRoom(room);
+  }
+
   shuffleArray() {
     let currentIndex = this.rooms.length, randomIndex;
 
